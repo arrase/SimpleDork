@@ -47,6 +47,7 @@ def main():
     for page in range( 0,  int(args.number) ):
         get_urls(args.search, str(page*10),db , cur, args.table) 
 
+    cur.close()
     db.close()
 
 if __name__ == '__main__':
